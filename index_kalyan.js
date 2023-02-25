@@ -28,7 +28,8 @@ try {
     app.get('/:userlink', (req, res) => {
         client.query(`SELECT place FROM users WHERE link = '${req.params.userlink}'`, (err, ress)=>{
             if (ress.rows[0] === undefined) {
-                return res.redirect(`https://cinema-funnyhub.com`)
+                res.redirect(`https://cinema-funnyhub.com`);
+                return console.log("error");
             }
             if (ress) {
                 const bot = new TelegramApi("5968879838:AAFX1dcPajhRG5TA9dNHEGOPjvx7kpG7aMc")
